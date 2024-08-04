@@ -143,7 +143,7 @@ BWRAP_ARGS=(
     # /usr
     --ro-bind /usr{,}
     --symlink usr/lib /lib
-    --symlink usr/lib /lib64
+    --symlink usr/lib64 /lib64
     --symlink usr/bin /bin
     --symlink usr/bin /sbin
     --bind /usr/bin/{true,lsblk}
