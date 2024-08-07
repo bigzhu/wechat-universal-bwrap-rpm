@@ -36,3 +36,19 @@ cp /var/lib/mock/*-$(uname -m)/result/wechat-universal-bwrap-*.rpm .
 sudo cp /usr/lib64/libbz2.so.1 /usr/lib64/libbz2.so.1.0
 sudo rpm -i ./wechat-universal-bwrap-1.0.0.241-1.fc40.x86_64.rpm --nodeps
 ```
+
+## 激活输入法
+
+```bash
+sudo nvim /etc/environment
+```
+
+确保内容如下
+
+```bash
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+```
+
+重启
