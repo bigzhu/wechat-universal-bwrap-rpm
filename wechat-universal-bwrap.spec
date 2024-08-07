@@ -60,6 +60,7 @@ gcc %{optflags} -fPIC -shared %{_lib_uos}.c -o %{_lib_uos}.so
 echo 'Popupating pkgdir with data from wechat-universal deb file...'
 mkdir tmp
 cd tmp
+cp ../wechat-$(uname -m).deb .
 bsdtar -xf ../wechat-$(uname -m).deb
 tar xvf data.tar.xz
 mkdir -p %{buildroot}/opt
